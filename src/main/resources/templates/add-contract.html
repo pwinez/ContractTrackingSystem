@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Contract</title>
+</head>
+<body>
+
+<h1>Add Contract</h1>
+
+<form action="/contracts/add-contract" method="post" th:object="${contract}">
+    <label for="companyName">Company Name:</label>
+    <input type="text" id="companyName" name="companyName" th:field="*{companyName}" required>
+    <br>
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" name="startDate" th:field="*{startDate}" required>
+    <br>
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" name="endDate" th:field="*{endDate}" required>
+    <br>
+    <button type="submit">Add Contract</button>
+</form>
+
+</body>
+</html>
